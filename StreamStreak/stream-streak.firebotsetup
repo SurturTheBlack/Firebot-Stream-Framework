@@ -1,0 +1,218 @@
+{
+  "name": "Stream Streak",
+  "description": "Installs stream streak commands/events powered by the unified Stream Backend variables and effect.",
+  "author": "Surtur The Black",
+  "version": 1,
+  "importQuestions": [],
+  "requireCurrency": false,
+  "components": {
+    "commands": [
+      {
+        "id": "9af56894-d0e8-4589-9fa4-21759a5a4a11",
+        "trigger": "!streakmark",
+        "type": "custom",
+        "active": true,
+        "simple": false,
+        "sendCooldownMessage": false,
+        "cooldownMessage": "This command is still on cooldown for: {timeLeft}",
+        "cooldown": {
+          "global": 5,
+          "user": 5
+        },
+        "effects": {
+          "id": "b6d8ac80-23bc-41a2-9a61-2f6ea2493b11",
+          "list": [
+            {
+              "id": "6b6d6f3a-90fd-45df-9a6f-1bf291a24710",
+              "type": "firebot:delete-chat-message",
+              "active": true,
+              "percentWeight": null
+            },
+            {
+              "id": "6b6d6f3a-90fd-45df-9a6f-1bf291a24711",
+              "type": "surtur:stream-streak-mark",
+              "username": "",
+              "writeCustomVariables": true,
+              "variablePrefix": "streamstreak_",
+              "active": true,
+              "percentWeight": null
+            }
+          ],
+          "runMode": "all"
+        },
+        "restrictionData": {
+          "restrictions": [],
+          "mode": "all",
+          "sendFailMessage": true,
+          "failMessage": "Sorry @{user}, you cannot use this command because: {reason}",
+          "sendAsReply": false
+        },
+        "aliases": [],
+        "sortTags": ["stream_streak"],
+        "treatQuotedTextAsSingleArg": false,
+        "allowTriggerBySharedChat": "inherit",
+        "sendCooldownMessageAsReply": true,
+        "createdBy": "setup-import",
+        "createdAt": "2026-06-27T00:00:00.000+00:00",
+        "count": 0,
+        "lastEditBy": "setup-import",
+        "lastEditAt": "2026-06-27T00:00:00.000+00:00"
+      },
+      {
+        "id": "9af56894-d0e8-4589-9fa4-21759a5a4a12",
+        "trigger": "!streak",
+        "type": "custom",
+        "active": true,
+        "simple": false,
+        "sendCooldownMessage": false,
+        "cooldownMessage": "This command is still on cooldown for: {timeLeft}",
+        "cooldown": {
+          "global": 5,
+          "user": 5
+        },
+        "effects": {
+          "id": "b6d8ac80-23bc-41a2-9a61-2f6ea2493b12",
+          "list": [
+            {
+              "id": "6b6d6f3a-90fd-45df-9a6f-1bf291a2470a",
+              "type": "firebot:delete-chat-message",
+              "active": true,
+              "percentWeight": null
+            },
+            {
+              "id": "6b6d6f3a-90fd-45df-9a6f-1bf291a24713",
+              "type": "firebot:chat",
+              "message": "@$streamStreak[$user, username] - Stream Streak: $streamStreak[$user, streamstreak] | Total Streams: $streamStreak[$user, totalstreams] | Longest Streak: $streamStreak[$user, longeststreamstreak]",
+              "chatter": "Streamer",
+              "sendAsReply": false,
+              "active": true,
+              "percentWeight": null
+            }
+          ],
+          "runMode": "all"
+        },
+        "restrictionData": {
+          "restrictions": [],
+          "mode": "all",
+          "sendFailMessage": true,
+          "failMessage": "Sorry @{user}, you cannot use this command because: {reason}",
+          "sendAsReply": false
+        },
+        "aliases": [],
+        "sortTags": ["c14fd57e-f2d2-43af-aed8-e8c7fd146737"],
+        "treatQuotedTextAsSingleArg": false,
+        "allowTriggerBySharedChat": "inherit",
+        "sendCooldownMessageAsReply": true,
+        "createdBy": "setup-import",
+        "createdAt": "2026-06-27T00:00:00.000+00:00",
+        "count": 0,
+        "lastEditBy": "setup-import",
+        "lastEditAt": "2026-06-27T00:00:00.000+00:00"
+      },
+      {
+        "id": "9af56894-d0e8-4589-9fa4-21759a5a4a13",
+        "trigger": "!streakme",
+        "type": "custom",
+        "active": true,
+        "simple": false,
+        "sendCooldownMessage": false,
+        "cooldownMessage": "This command is still on cooldown for: {timeLeft}",
+        "cooldown": {
+          "global": 5,
+          "user": 30
+        },
+        "effects": {
+          "id": "b6d8ac80-23bc-41a2-9a61-2f6ea2493b13",
+          "list": [
+            {
+              "id": "6b6d6f3a-90fd-45df-9a6f-1bf291a2470b",
+              "type": "firebot:delete-chat-message",
+              "active": true,
+              "percentWeight": null
+            },
+            {
+              "id": "6b6d6f3a-90fd-45df-9a6f-1bf291a24715",
+              "type": "firebot:chat",
+              "message": "Your stream stats - Streak: $streamStreak[$user, streamstreak] | Total Streams: $streamStreak[$user, totalstreams] | Longest Streak: $streamStreak[$user, longeststreamstreak]",
+              "chatter": "Streamer",
+              "whisper": "$user",
+              "sendAsReply": false,
+              "active": true,
+              "percentWeight": null
+            }
+          ],
+          "runMode": "all"
+        },
+        "restrictionData": {
+          "restrictions": [],
+          "mode": "all",
+          "sendFailMessage": true,
+          "failMessage": "Sorry @{user}, you cannot use this command because: {reason}",
+          "sendAsReply": false
+        },
+        "aliases": [],
+        "sortTags": ["stream_streak"],
+        "treatQuotedTextAsSingleArg": false,
+        "allowTriggerBySharedChat": "inherit",
+        "sendCooldownMessageAsReply": true,
+        "createdBy": "setup-import",
+        "createdAt": "2026-06-27T00:00:00.000+00:00",
+        "count": 0,
+        "lastEditBy": "setup-import",
+        "lastEditAt": "2026-06-27T00:00:00.000+00:00"
+      }
+    ],
+    "counters": [],
+    "currencies": [],
+    "effectQueues": [],
+    "events": [],
+    "eventGroups": [
+      {
+        "id": "a1b2c3d4-e5f6-7890-ab12-cd34ef567801",
+        "name": "StreamStreaks",
+        "active": true,
+        "sortTags": ["c14fd57e-f2d2-43af-aed8-e8c7fd146737"],
+        "events": [
+          {
+            "id": "a1b2c3d4-e5f6-7890-ab12-cd34ef567802",
+            "name": "Update stream streak",
+            "active": true,
+            "cached": true,
+            "sortTags": ["c14fd57e-f2d2-43af-aed8-e8c7fd146737"],
+            "eventId": "viewer-arrived",
+            "sourceId": "twitch",
+            "filterData": {
+              "mode": "exclusive",
+              "filters": []
+            },
+            "effects": {
+              "id": "a1b2c3d4-e5f6-7890-ab12-cd34ef567803",
+              "list": [
+                {
+                  "id": "a1b2c3d4-e5f6-7890-ab12-cd34ef567804",
+                  "type": "surtur:stream-streak-mark",
+                  "active": true,
+                  "username": "",
+                  "writeCustomVariables": true,
+                  "variablePrefix": "streamstreak_",
+                  "percentWeight": null
+                }
+              ],
+              "runMode": "all"
+            }
+          }
+        ]
+      }
+    ],
+    "hotkeys": [],
+    "presetEffectLists": [],
+    "timers": [],
+    "scheduledTasks": [],
+    "variableMacros": [],
+    "viewerRoles": [],
+    "viewerRankLadders": [],
+    "quickActions": [],
+    "overlayWidgetConfigs": [],
+    "globalValues": []
+  }
+}

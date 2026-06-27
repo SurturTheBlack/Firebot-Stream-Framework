@@ -1,0 +1,247 @@
+{
+  "name": "Stream Session Controls",
+  "description": "Installs mod/broadcaster commands for stream session lifecycle via the surtur:stream-session-control effect.",
+  "author": "Surtur The Black",
+  "version": 1,
+  "importQuestions": [],
+  "requireCurrency": false,
+  "components": {
+    "commands": [
+      {
+        "id": "7c2f1b5a-5a91-4f50-9753-965a09eec101",
+        "trigger": "!sessionstatus",
+        "type": "custom",
+        "active": true,
+        "simple": false,
+        "sendCooldownMessage": false,
+        "cooldownMessage": "This command is still on cooldown for: {timeLeft}",
+        "cooldown": {
+          "global": 0,
+          "user": 0
+        },
+        "effects": {
+          "id": "0dcb486b-c0ab-4a45-9358-20fb93242b01",
+          "list": [
+            {
+              "id": "62a3d132-4a04-48c7-935a-d236471495b2",
+              "type": "surtur:stream-session-control",
+              "action": "status",
+              "notes": "",
+              "active": true,
+              "percentWeight": null
+            }
+          ],
+          "runMode": "all"
+        },
+        "restrictionData": {
+          "restrictions": [
+            {
+              "id": "efc6f081-1310-4521-a05f-9300ca20ee01",
+              "type": "firebot:permissions",
+              "mode": "roles",
+              "roleIds": [
+                "broadcaster",
+                "mod"
+              ],
+              "ranks": []
+            }
+          ],
+          "mode": "all",
+          "sendFailMessage": true,
+          "failMessage": "Sorry @{user}, you cannot use this command because: {reason}",
+          "sendAsReply": false
+        },
+        "aliases": [],
+        "sortTags": [],
+        "treatQuotedTextAsSingleArg": false,
+        "allowTriggerBySharedChat": "inherit",
+        "sendCooldownMessageAsReply": true,
+        "createdBy": "setup-import",
+        "createdAt": "2026-06-27T00:00:00.000+00:00",
+        "count": 0,
+        "lastEditBy": "setup-import",
+        "lastEditAt": "2026-06-27T00:00:00.000+00:00"
+      },
+      {
+        "id": "7c2f1b5a-5a91-4f50-9753-965a09eec102",
+        "trigger": "!sessionnew",
+        "type": "custom",
+        "active": true,
+        "simple": false,
+        "sendCooldownMessage": false,
+        "cooldownMessage": "This command is still on cooldown for: {timeLeft}",
+        "cooldown": {
+          "global": 0,
+          "user": 0
+        },
+        "effects": {
+          "id": "0dcb486b-c0ab-4a45-9358-20fb93242b02",
+          "list": [
+            {
+              "id": "4c794a64-182f-4a91-8e49-5d0d6b7923a6",
+              "type": "surtur:stream-session-control",
+              "action": "new",
+              "notes": "manual command: !sessionnew",
+              "active": true,
+              "percentWeight": null
+            }
+          ],
+          "runMode": "all"
+        },
+        "restrictionData": {
+          "restrictions": [
+            {
+              "id": "efc6f081-1310-4521-a05f-9300ca20ee02",
+              "type": "firebot:permissions",
+              "mode": "roles",
+              "roleIds": [
+                "broadcaster",
+                "mod"
+              ],
+              "ranks": []
+            }
+          ],
+          "mode": "all",
+          "sendFailMessage": true,
+          "failMessage": "Sorry @{user}, you cannot use this command because: {reason}",
+          "sendAsReply": false
+        },
+        "aliases": [],
+        "sortTags": [],
+        "treatQuotedTextAsSingleArg": false,
+        "allowTriggerBySharedChat": "inherit",
+        "sendCooldownMessageAsReply": true,
+        "createdBy": "setup-import",
+        "createdAt": "2026-06-27T00:00:00.000+00:00",
+        "count": 0,
+        "lastEditBy": "setup-import",
+        "lastEditAt": "2026-06-27T00:00:00.000+00:00"
+      },
+      {
+        "id": "7c2f1b5a-5a91-4f50-9753-965a09eec103",
+        "trigger": "!sessionresume",
+        "type": "custom",
+        "active": true,
+        "simple": false,
+        "sendCooldownMessage": false,
+        "cooldownMessage": "This command is still on cooldown for: {timeLeft}",
+        "cooldown": {
+          "global": 0,
+          "user": 0
+        },
+        "effects": {
+          "id": "0dcb486b-c0ab-4a45-9358-20fb93242b03",
+          "list": [
+            {
+              "id": "763fa818-6073-4e9d-b26a-615b0c8a9782",
+              "type": "surtur:stream-session-control",
+              "action": "resume",
+              "notes": "manual command: !sessionresume",
+              "active": true,
+              "percentWeight": null
+            }
+          ],
+          "runMode": "all"
+        },
+        "restrictionData": {
+          "restrictions": [
+            {
+              "id": "efc6f081-1310-4521-a05f-9300ca20ee03",
+              "type": "firebot:permissions",
+              "mode": "roles",
+              "roleIds": [
+                "broadcaster",
+                "mod"
+              ],
+              "ranks": []
+            }
+          ],
+          "mode": "all",
+          "sendFailMessage": true,
+          "failMessage": "Sorry @{user}, you cannot use this command because: {reason}",
+          "sendAsReply": false
+        },
+        "aliases": [],
+        "sortTags": [],
+        "treatQuotedTextAsSingleArg": false,
+        "allowTriggerBySharedChat": "inherit",
+        "sendCooldownMessageAsReply": true,
+        "createdBy": "setup-import",
+        "createdAt": "2026-06-27T00:00:00.000+00:00",
+        "count": 0,
+        "lastEditBy": "setup-import",
+        "lastEditAt": "2026-06-27T00:00:00.000+00:00"
+      },
+      {
+        "id": "7c2f1b5a-5a91-4f50-9753-965a09eec104",
+        "trigger": "!sessionend",
+        "type": "custom",
+        "active": true,
+        "simple": false,
+        "sendCooldownMessage": false,
+        "cooldownMessage": "This command is still on cooldown for: {timeLeft}",
+        "cooldown": {
+          "global": 0,
+          "user": 0
+        },
+        "effects": {
+          "id": "0dcb486b-c0ab-4a45-9358-20fb93242b04",
+          "list": [
+            {
+              "id": "7991d7ec-1b4f-41f6-89d9-b463c739d130",
+              "type": "surtur:stream-session-control",
+              "action": "end",
+              "notes": "manual command: !sessionend",
+              "active": true,
+              "percentWeight": null
+            }
+          ],
+          "runMode": "all"
+        },
+        "restrictionData": {
+          "restrictions": [
+            {
+              "id": "efc6f081-1310-4521-a05f-9300ca20ee04",
+              "type": "firebot:permissions",
+              "mode": "roles",
+              "roleIds": [
+                "broadcaster",
+                "mod"
+              ],
+              "ranks": []
+            }
+          ],
+          "mode": "all",
+          "sendFailMessage": true,
+          "failMessage": "Sorry @{user}, you cannot use this command because: {reason}",
+          "sendAsReply": false
+        },
+        "aliases": [],
+        "sortTags": [],
+        "treatQuotedTextAsSingleArg": false,
+        "allowTriggerBySharedChat": "inherit",
+        "sendCooldownMessageAsReply": true,
+        "createdBy": "setup-import",
+        "createdAt": "2026-06-27T00:00:00.000+00:00",
+        "count": 0,
+        "lastEditBy": "setup-import",
+        "lastEditAt": "2026-06-27T00:00:00.000+00:00"
+      }
+    ],
+    "counters": [],
+    "currencies": [],
+    "effectQueues": [],
+    "events": [],
+    "eventGroups": [],
+    "hotkeys": [],
+    "presetEffectLists": [],
+    "timers": [],
+    "scheduledTasks": [],
+    "variableMacros": [],
+    "viewerRoles": [],
+    "viewerRankLadders": [],
+    "quickActions": [],
+    "overlayWidgetConfigs": [],
+    "globalValues": []
+  }
+}
